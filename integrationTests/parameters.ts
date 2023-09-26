@@ -8,7 +8,7 @@ export interface DefaultParameters extends InterpolateParameters {
 }
 
 export interface ConfigurationParameters {
-  [config: string]: DefaultParameters
+  [config: string]: DefaultParameters;
 }
 
 export const defaultParameters: ConfigurationParameters = {
@@ -33,6 +33,18 @@ export const defaultParameters: ConfigurationParameters = {
   "dotnet31-windows": {
     serviceName: "dt31-win",
     configName: "dotnet31-windows",
+    runtime: "dotnet",
+    region: "weur",
+  },
+  "dotnet7-linux": {
+    serviceName: "dt7-lin",
+    configName: "dotnet7-linux",
+    runtime: "dotnet",
+    region: "weur",
+  },
+  "dotnet7-windows": {
+    serviceName: "dt7-win",
+    configName: "dotnet7-windows",
     runtime: "dotnet",
     region: "weur",
   },

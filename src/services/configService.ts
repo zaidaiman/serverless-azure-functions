@@ -350,5 +350,18 @@ export class ConfigService {
         constants.tmpBuildDir
       ],
     });
+
+    this.cliCommandFactory.registerCommand(`${Runtime.DOTNET7}-${BuildMode.DEBUG}`, {
+      command: "dotnet",
+      args: [
+        "build",
+        "--configuration",
+        "debug",
+        "--framework",
+        "net7.0",
+        "--output",
+        constants.tmpBuildDir
+      ],
+    });
   }
 }

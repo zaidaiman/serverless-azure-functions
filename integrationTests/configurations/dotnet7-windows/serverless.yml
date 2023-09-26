@@ -1,0 +1,23 @@
+service: dt7-win
+
+provider:
+  name: azure
+  runtime: dotnet7.0
+  region: West Europe
+  prefix: int
+  stage: qa
+  apim: true
+  environment:
+    VARIABLE_FOO: 'foo'
+
+plugins:
+  - serverless-azure-functions
+
+functions:
+  hello:
+    handler: hello
+    events:
+      - http: true
+        methods:
+          - GET
+        authLevel: anonymous
